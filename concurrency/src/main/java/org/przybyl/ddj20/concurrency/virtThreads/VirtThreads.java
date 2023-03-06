@@ -20,9 +20,7 @@ import java.net.*;
 import java.net.http.*;
 import java.time.*;
 
-/**
- * Created by Piotr Przybył (piotr@przybyl.org)
- */
+
 public class VirtThreads {
 
     public static void main(String[] args) throws InterruptedException {

@@ -40,7 +40,7 @@ public class ScopedValuesDemo {
                 doSomeStuffOn(voyager);
 
                 System.out.println(" -- let's jail current character");
-                ScopedValue.where(SECURITY_CLEARANCE_LEVEL, 0)
+                ScopedValue.where(SECURITY_CLEARANCE_LEVEL, levelForPrisoner())
                     .run(() -> doSomeStuffOn(voyager));
 
                 System.out.println(" -- and let's try again");
@@ -65,6 +65,10 @@ public class ScopedValuesDemo {
 
     private static int levelFromRequest() {
         return new Random().nextInt(10);
+    }
+
+    private static int levelForPrisoner() {
+        return 0;
     }
 
     static class Starship {

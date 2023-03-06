@@ -18,9 +18,6 @@ package org.przybyl.ddj20.concurrency.virtThreads;
 
 import java.time.*;
 
-/**
- * Created by Piotr Przybył (piotr@przybyl.org)
- */
 public class VirtThreadsLimits {
 
     public static void main(String[] args) throws InterruptedException {

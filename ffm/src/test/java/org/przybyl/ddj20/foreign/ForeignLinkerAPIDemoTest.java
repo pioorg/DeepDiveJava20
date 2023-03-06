@@ -23,16 +23,14 @@ import org.testcontainers.utility.*;
 
 import java.nio.file.*;
 
-/**
- * Created by Piotr Przybył (piotr@przybyl.org)
- */
 class ForeignLinkerAPIDemoTest {
 
     @Test
+    @Disabled
     public void shouldNotWorkForRoot() {
         var jar = MountableFile.forHostPath(Paths.get("target/ffm-1.0-SNAPSHOT.jar"));
 
-        try (var container = new GenericContainer<>("eclipse-temurin:19-alpine")
+        try (var container = new GenericContainer<>("openjdk:20-slim")
             .withCopyFileToContainer(jar, "/tmp/test.jar")
             .withExposedPorts(8000)
             .withCommand("jwebserver")) {

@@ -54,7 +54,7 @@ class VirtThreadsPinTCTest {
             // preparing the artifact to be copied
             var jar = MountableFile.forHostPath(Paths.get("target/concurrency-1.0-SNAPSHOT.jar"));
 
-            try (var container = new GenericContainer<>("eclipse-temurin:20-alpine")
+            try (var container = new GenericContainer<>("openjdk:20-slim")
                 .withCopyFileToContainer(jar, "/tmp/test.jar")
                 .withExposedPorts(8000)
                 .withCommand("jwebserver")) {

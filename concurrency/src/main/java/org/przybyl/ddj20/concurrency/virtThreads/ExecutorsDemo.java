@@ -22,10 +22,6 @@ import java.time.*;
 import java.util.concurrent.*;
 import java.util.stream.*;
 
-
-/**
- * Created by Piotr Przybył (piotr@przybyl.org)
- */
 public class ExecutorsDemo {
 
     public static void main(String[] args) {

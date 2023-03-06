@@ -21,9 +21,6 @@ import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-/**
- * Created by Piotr Przybył (piotr@przybyl.org)
- */
 public class RecordPatternsDemo {
 
     private final static Random random = new Random();
@@ -42,7 +39,7 @@ public class RecordPatternsDemo {
         }
 
         switch (s) {
-            case Value( double v) -> System.out.printf("I got the value %f%n", v);
+            case Value(double v) -> System.out.printf("I got the value %f%n", v);
             case Complex(Value r, Value i) -> System.out.printf("I got the Complex [%f, %f]%n", r.value(), i.value());
 //            case Complex(Value(double r), Value(double i)) -> System.out.printf("I got the Complex [%f, %f]%n", r, i);
             default -> System.out.printf("Was ist das? %s%n", s);
@@ -111,8 +108,8 @@ sealed interface NValue {
 }
 
 record DValue(double value) implements NValue {
-};
+}
 
 record IValue(int value) implements NValue {
-};
+}
 
