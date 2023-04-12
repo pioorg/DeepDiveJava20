@@ -43,6 +43,8 @@ class VirtThreadsDiffTest {
         assertEquals(Thread.NORM_PRIORITY, thread.getPriority());
     }
 
+    // everything below might not be relevant for JDK 21, it seems
+
     @Test
     void shouldSuportThreadLocalVariablesByDefault() throws InterruptedException {
         var tl = new ThreadLocal<Integer>();

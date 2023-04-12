@@ -30,7 +30,7 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.0.0-M6</version>
         <configuration>
-          <argLine>--enable-preview</argLine>
+          <argLine>--enable-preview --add-modules jdk.incubator.concurrent</argLine>
         </configuration>
       </plugin>
       <plugin>
