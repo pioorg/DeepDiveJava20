@@ -20,6 +20,8 @@ import java.time.*;
 
 public class VirtThreadsLimits {
 
+    private final static Duration EMULATE_WORK_FOR = Duration.ofSeconds(6);
+
     public static void main(String[] args) throws InterruptedException {
         Instant start = Instant.now();
         Thread lastThread = null;
@@ -49,7 +51,7 @@ public class VirtThreadsLimits {
 
     static void blockingOperation(int task) {
 //            System.out.printf("Task: %6d, thread %s%n", task, Thread.currentThread());
-        sneakySleep(Duration.ofSeconds(10));
+        sneakySleep(EMULATE_WORK_FOR);
     }
 
 

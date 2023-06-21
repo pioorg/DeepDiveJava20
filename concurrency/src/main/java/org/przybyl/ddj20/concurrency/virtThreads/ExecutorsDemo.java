@@ -29,7 +29,7 @@ public class ExecutorsDemo {
 
         // Manipulate parameters here, it depends on your hardware
         int tasks = 30_000;
-        var blockedFor = Duration.ofSeconds(1);
+        var blockedFor = Duration.ofSeconds(6);
         try (var e = createExecutor()) {
             IntStream.rangeClosed(0, tasks).forEach(i -> {
                 e.submit(() -> {
